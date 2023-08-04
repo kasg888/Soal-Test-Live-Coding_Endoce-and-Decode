@@ -11,4 +11,4 @@
  Output : cdef <br>
  <br><br>
  Input : <decode>cdef <br>
- output : abcd <br>
+ Output : abcd <br>
