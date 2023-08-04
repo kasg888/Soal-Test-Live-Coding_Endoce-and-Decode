@@ -5,30 +5,30 @@ public class Main {
         char[] chword = kata.toCharArray();
         if (word.contains("<encode>")) {
             for (int i = 0; i < kata.length(); i++) {
-                int dist = 2;
+                int jarak = 2;
 
 //            if melebihi Z
-                if (dist + (chword[i] - 'a') >= 26) {
-                    dist = (dist + (chword[i] - 'a')) % 26;
-                    chword[i] = (char) ('a' + dist);
+                if (jarak + (chword[i] - 'a') >= 26) {
+                    jarak = (jarak + (chword[i] - 'a')) % 26;
+                    chword[i] = (char) ('a' + jarak);
                 }
 
                 else {
-                    chword[i] = (char) (chword[i] + dist);
+                    chword[i] = (char) (chword[i] + jarak);
                 }
             }
         }
 
         if (word.contains("<decode>")) {
             for (int i = 0; i < kata.length(); i++) {
-                int dist = -2;
+                int jarak = -2;
 
 //            if dibawah A
-                if (dist + (chword[i] - 'a') < 0) {
-                    dist = (dist + (chword[i] - 'a')) + 26;
-                    chword[i] = (char) ('a' + dist);
+                if (jarak + (chword[i] - 'a') < 0) {
+                    jarak = (jarak + (chword[i] - 'a')) + 26;
+                    chword[i] = (char) ('a' + jarak);
                 } else {
-                    chword[i] = (char) (chword[i] + dist);
+                    chword[i] = (char) (chword[i] + jarak);
                 }
             }
         }
